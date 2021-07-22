@@ -17,17 +17,15 @@ public static class ContextMenuOpenListener
 }
 internal static class TextureImporterContextMenuExtensions
 {
-    private static object copied;
-
     [MenuItem("CONTEXT/TextureImporter/Check/Texture Quality")]
     private static void CopyMaxSize(MenuCommand command)
     {
         var textureImporter = (TextureImporter)command.context;
-        copied = textureImporter.textureType;
         var texturePath = textureImporter.assetPath;
-        string pathToExe = Application.dataPath.Replace(@"/", @"\") + "\\ARCoreCheck\\";
+        string pathToExe = Application.dataPath.Replace(@"/", @"\") + "\\ARFoundationCheck\\";
         string assetBasePath = texturePath.Remove(0, 6);
         string cmd = pathToExe + "arcoreimg.exe eval-img --input_image_path=" + (Application.dataPath + assetBasePath).Replace(@"/", @"\").Replace("JPG", "jpg");
+        UnityEngine.Debug.Log(cmd);
         using (Process p = new Process())
         {
             p.StartInfo.FileName = "powershell.exe";
@@ -40,16 +38,7 @@ internal static class TextureImporterContextMenuExtensions
             p.WaitForExit();
             p.Close();
         }
-        UnityEngine.Debug.Log("Copied TextureImporterType: " + texturePath);
     }
 
-    [MenuItem("CONTEXT/TextureImporter/Paste/Texture Type")]
-    private static void PasteTextureType(MenuCommand command)
-    {
-        var textureImporter = (TextureImporter)command.context;
-        textureImporter.textureType = (TextureImporterType)copied;
-
-        UnityEngine.Debug.Log("Pasted TextureImporterType: " + copied);
-    }
 }
 
