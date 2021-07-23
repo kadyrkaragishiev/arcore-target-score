@@ -570,7 +570,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 512687545}
-  - component: {fileID: 512687546}
   - component: {fileID: 512687547}
   m_Layer: 0
   m_Name: Controller
@@ -593,27 +592,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &512687546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512687544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e68303c3e5828440bfbfc972476ac58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressText: {fileID: 420084409}
-  ARTrackedImageManager: {fileID: 1659859600}
-  ARRaycastManager: {fileID: 1659859601}
-  ARPlaneManager: {fileID: 1659859602}
-  xRReferenceImages: {fileID: 11400000, guid: 372d4c643bcbebf47af65e6b43cb91c3, type: 2}
-  PlaneCheckSteps: 5
-  CombineContoursDelay: 3
-  ManulModeTimeOut: 0
-  PlaneCheckProgress: 0
 --- !u!114 &512687547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +863,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659859597}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
   m_Name: 
@@ -898,7 +876,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659859597}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 

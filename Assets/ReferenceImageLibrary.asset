@@ -14,4 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GuidLow: 5524228766798066185
   m_GuidHigh: 5766322815848530830
-  m_Images: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5619199612821986415
+      m_GuidHigh: 7279712640809544851
+    m_SerializedTextureGuid:
+      m_GuidLow: 9346350079991242642
+      m_GuidHigh: 13744859423477024968
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: photo_2021-07-23_10-37-51
+    m_Texture: {fileID: 2800000, guid: f0525f92e7e081b4c8480780d28cbfbe, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5370386077963413508
+      m_GuidHigh: 11960298790171837348
+    m_SerializedTextureGuid:
+      m_GuidLow: 11219783063821431083
+      m_GuidHigh: 579395466775174763
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: photo_2021-07-23_10-37-53
+    m_Texture: {fileID: 2800000, guid: 6805312bad409bb46b1e9b751b6d0a08, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4636863374882401427
+      m_GuidHigh: 14876857980401902993
+    m_SerializedTextureGuid:
+      m_GuidLow: 2424291747939443777
+      m_GuidHigh: 413093027350188441
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: photo_2021-07-23_10-37-56
+    m_Texture: {fileID: 2800000, guid: 13d76441d08021a499116672eb99bb05, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5280447296841823076
+      m_GuidHigh: 11222834324572345236
+    m_SerializedTextureGuid:
+      m_GuidLow: 4148970803711156751
+      m_GuidHigh: 3621507701345996746
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: photo_2021-07-23_10-38-13
+    m_Texture: {fileID: 2800000, guid: baaba20f1af63994cacf111a112e4232, type: 3}

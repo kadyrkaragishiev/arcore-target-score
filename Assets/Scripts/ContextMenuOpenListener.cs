@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEditor;
 using System.Diagnostics;
-
+#if UNITY_EDITOR
 [InitializeOnLoad]
+#endif
 public static class ContextMenuOpenListener
 {
+#if UNITY_EDITOR
     static ContextMenuOpenListener()
     {
         EditorApplication.contextualPropertyMenu += OnContextMenuOpening;
@@ -34,11 +36,12 @@ internal static class TextureImporterContextMenuExtensions
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.UseShellExecute = false;
             p.Start();
-            UnityEngine.Debug.Log(p.StandardOutput.ReadToEnd());
+            EditorUtility.DisplayDialog("Quality:", p.StandardOutput.ReadToEnd(), "OK");
             p.WaitForExit();
             p.Close();
         }
     }
+#endif
 
 }
 

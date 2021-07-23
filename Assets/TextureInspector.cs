@@ -6,7 +6,8 @@ using System.Diagnostics;
 
 public static class UnityUtil
 {
-	[MenuItem("Tools/ARFoundationQualityCheck")]
+#if UNITY_EDITOR
+    [MenuItem("Tools/ARFoundationQualityCheck")]
 	public static void ParseCurrentElement()
     {
 		string getSelectedObj = GetSelectedPathOrFallback();
@@ -30,7 +31,7 @@ public static class UnityUtil
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.UseShellExecute = false;
             p.Start();
-            UnityEngine.Debug.Log(p.StandardOutput.ReadToEnd());
+            EditorUtility.DisplayDialog("Quality:", p.StandardOutput.ReadToEnd(), "OK");
             p.WaitForExit();
             p.Close();
         }
@@ -50,4 +51,5 @@ public static class UnityUtil
 		}
 		return path;
 	}
+#endif
 }
