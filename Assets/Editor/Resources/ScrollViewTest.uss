@@ -1,0 +1,4 @@
+.horizontalContainer { flex-direction: row; }
+#itemIdLbl { flex-grow: 1; }
+#addItemBtn { margin: 5px 20px; padding: 5px; }
+#deleteItemBtn { color: red; }

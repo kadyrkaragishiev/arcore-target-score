@@ -27,7 +27,6 @@ internal static class TextureImporterContextMenuExtensions
         string pathToExe = Application.dataPath.Replace(@"/", @"\") + "\\ARFoundationCheck\\";
         string assetBasePath = texturePath.Remove(0, 6);
         string cmd = pathToExe + "arcoreimg.exe eval-img --input_image_path=" + (Application.dataPath + assetBasePath).Replace(@"/", @"\").Replace("JPG", "jpg");
-        UnityEngine.Debug.Log(cmd);
         using (Process p = new Process())
         {
             p.StartInfo.FileName = "powershell.exe";

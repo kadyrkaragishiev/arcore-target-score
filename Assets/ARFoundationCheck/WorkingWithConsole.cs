@@ -27,6 +27,7 @@ public class WorkingWithConsole : Editor
         //UnityEngine.Debug.Log(Application.dataPath);
         //string command = pathToExe + "arcoreimg.exe eval-img --input_image_path=C:\\UsingFiles\\UnityProjects\\ARTestProject\\Assets\\ARCoreCheck\\IMG_7432.png";
         string command = pathToExe + "arcoreimg.exe eval-img --input_image_path="+(Application.dataPath+assetBasePath).Replace(@"/",@"\").Replace("JPG","jpg");
+        UnityEngine.Debug.Log(command);
         //UnityEngine.Debug.Log(command);
         using (Process p = new Process())
         {
@@ -35,7 +36,6 @@ public class WorkingWithConsole : Editor
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.UseShellExecute = false;
             p.Start();
-            UnityEngine.Debug.Log(p.StandardOutput.ReadToEnd());
             p.WaitForExit();
             p.Close();
         }
